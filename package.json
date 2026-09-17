@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.34.5",
   "description": "Vue 3 + TypeScript + Rspack 起步模板，内置 Vue2 遗留代码扫描器（迁移成本量化）",
   "scripts": {
     "dev": "rspack serve",

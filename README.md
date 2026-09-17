@@ -74,14 +74,14 @@ webpack 强耦合写法、`mixins`、EventBus。**MDI（迁移债务指数）** 
 ## 快速开始
 
 ```bash
-npm install
-npm run dev          # 本地开发，默认 http://localhost:5173
-npm run scan -- --dir ../your-legacy-app --html report.html
-npm run typecheck    # vue-tsc 类型检查（含模板）
-npm test             # 单测
-npm run build        # 产出 dist/
-PUBLIC_PATH=/your-repo/ npm run build   # 子路径部署
-npm run preview      # 本地预览 dist/
+pnpm install
+pnpm dev             # 本地开发，默认 http://localhost:5173
+pnpm scan -- --dir ../your-legacy-app --html report.html
+pnpm typecheck       # vue-tsc 类型检查（含模板）
+pnpm test            # 单测
+pnpm build           # 产出 dist/
+PUBLIC_PATH=/your-repo/ pnpm build   # 子路径部署
+pnpm preview         # 本地预览 dist/
 ```
 
 推送到 `master` 后由 GitHub Actions 自动类型检查 + 跑测试 + 构建 + 部署 Pages。
