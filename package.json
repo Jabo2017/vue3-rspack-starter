@@ -1,30 +1,32 @@
 {
-  "name": "study-vue-cli",
-  "version": "0.1.0",
+  "name": "vue3-rspack-starter",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "Vue 3 + TypeScript + Rspack 起步模板，内置 Vue2 遗留代码扫描器（迁移成本量化）",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "inspect": "vue-cli-service inspect",
-    "build:lib": "vue-cli-service build --target lib --name myLib ./src/components/HelloWorld.vue",
-    "build:wc": "vue-cli-service build --target wc --name my-wc ./src/components/HelloWorld.vue",
-    "deploy": "deploy.sh"
+    "dev": "rspack serve",
+    "build": "rspack build",
+    "preview": "node scripts/serve-dist.mjs",
+    "scan": "node scripts/scan-legacy.mjs",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^2.6.14",
-    "vue-router": "^3.5.1"
+    "pinia": "^4.0.3",
+    "vue": "^3.5.42",
+    "vue-router": "^5.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "@rspack/cli": "^2.2.5",
+    "@rspack/core": "^2.2.5",
+    "@vue/compiler-sfc": "^3.5.42",
+    "@vue/test-utils": "^2.5.1",
+    "jsdom": "^30.1.0",
+    "rspack-vue-loader": "^17.7.0",
+    "typescript": "5.9",
+    "vitest": "^5.0.1",
+    "vue-loader": "^17.4.2",
+    "vue-tsc": "^3.3.11"
   }
 }
